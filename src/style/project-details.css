@@ -6,6 +6,7 @@
 /* Columns */
 div [class*="col-"] {
     display: inline-block;
+    float: left;
 }
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -19,7 +20,12 @@ div [class*="col-"] {
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 
-body { margin: 0px; }
+body { margin: 0px;}
+
+#main-container {
+    margin: 0px;
+    padding: 0px;
+}
 
 #nav-bar {
     top: 0;
@@ -49,3 +55,26 @@ body { margin: 0px; }
 #signup { background-color: forestgreen; border: 2px solid white; }
 
 #signup:hover { background-color: lawngreen; color: black; }
+
+#side-bar {
+    float: left;
+    background-color: lightgray;
+    width: 100%;
+    height: 400px;
+}
+
+#project-description {
+    float: left;
+    background-color: white;
+    height: 200px;
+}
+
+#workspace {
+    float: left;
+    background-color: black;
+    height: 200px;
+}
+
+#side-bar, #project-description, #workspace { width: 100%; padding: 20px; }
+
+.clearfix:after { content: ""; display: table; clear: both; }
