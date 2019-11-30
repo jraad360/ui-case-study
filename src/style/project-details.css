@@ -56,6 +56,14 @@ body { margin: 0px;}
 
 #signup:hover { background-color: lawngreen; color: black; }
 
+#nav-bar-search {
+    width: 200px;
+}
+
+#profile-pic {
+    border-radius: 100%;
+}
+
 #side-bar {
     float: left;
     background-color: lightgray;
@@ -71,7 +79,7 @@ body { margin: 0px;}
 
 #workspace {
     float: left;
-    background-color: black;
+    background-color: darkgray;
     height: 200px;
 }
 
