@@ -6,6 +6,13 @@ $(document).ready(function(){
     }, function(){
         $(".dropdown-menu", this).stop().slideUp(100);
     });
+    
+    $(".side-bar-cat").click(function(){
+        console.log($(".fa-caret-right", this).length);
+        if($(".fa-caret-right", this).length > 0) $(".fa-caret-right", this).toggleClass("fas fa-caret-down");
+        else $(".fa-caret-down", this).toggleClass("fas fa-caret-right");
+        $("ul li", this).toggle();
+    })
 })
 
 function setup(){

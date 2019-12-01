@@ -12,7 +12,7 @@ div [class*="col-"] {display: inline-block; float: left;}
 .col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
-body {margin: 0px;}
+body {margin-top: 40px;}
 #main-container {margin: 0px; padding: 0px;}
 
 /* NAV BAR */
@@ -22,7 +22,8 @@ body {margin: 0px;}
     padding: 10px;
     margin: 0px;
     height: 50px;
-    width = 100%;
+    width: 100%;
+    position: fixed;
 }
 #nav-bar img {float: left; height: 100%;}
 .nav-bar-item {
@@ -61,12 +62,11 @@ ul {list-style: none;}
 .dropdown-menu li:hover {background-color: #ebeaea;}
 
 /* SIDE BAR */
-#side-bar {
-    float: left;
-    background-color: lightgray;
-    width: 100%;
-    height: 400px;
-}
+#side-bar {float: left; background-color: lightgray; width: 100%; height: 1000px;}
+#side-bar h2 {margin: 0px 0px 5px 0px;}
+#side-bar ul {margin: 0px; padding: 0px; font-weight: bold;}
+.side-bar-cat {font-size: 10pt; color: #404040;}
+.side-bar-cat li {display: none; padding-left: 10px;font-weight: normal;}
 
 /* MAIN AREA */
 #project-description {
@@ -78,9 +78,41 @@ ul {list-style: none;}
 #workspace {
     float: left;
     background-color: darkgray;
-    height: 200px;
 }
 
 #side-bar, #project-description, #workspace {width: 100%; padding: 20px;}
 
 .clearfix:after {content: ""; display: table; clear: both;}
+
+.category {
+    background-color: lightgray;
+    width: 30%;
+    text-align: center;
+    border-radius: 5%;
+    padding: 10px;
+    display: inline-block;
+    vertical-align:top;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 2px;
+}
+.category h3 {
+    margin: 0px;
+}
+
+.task {
+    text-align: left;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10%;
+    font-size: 8pt;
+}
+.task h4 {
+    margin: 0px;
+}
+
+.fa-caret-right, .fa-caret-down{
+    padding-right: 10px;
+}
