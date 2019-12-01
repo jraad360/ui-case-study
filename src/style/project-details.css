@@ -1,13 +1,6 @@
-* {
-    box-sizing: border-box;
-    font-family: Verdana, Arial;
-}
-
-/* Columns */
-div [class*="col-"] {
-    display: inline-block;
-    float: left;
-}
+/* BASIC STRUCTURE */
+* {box-sizing: border-box; font-family: Arial;}
+div [class*="col-"] {display: inline-block; float: left;}
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
@@ -19,14 +12,10 @@ div [class*="col-"] {
 .col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
+body {margin: 0px;}
+#main-container {margin: 0px; padding: 0px;}
 
-body { margin: 0px;}
-
-#main-container {
-    margin: 0px;
-    padding: 0px;
-}
-
+/* NAV BAR */
 #nav-bar {
     top: 0;
     background-color: black;
@@ -35,9 +24,7 @@ body { margin: 0px;}
     height: 50px;
     width = 100%;
 }
-
-#nav-bar img { float: left; height: 100%; }
-
+#nav-bar img {float: left; height: 100%;}
 .nav-bar-item {
     float: left;
     height: 100%;
@@ -47,23 +34,33 @@ body { margin: 0px;}
     margin: 0px 5px 0px 5px;
     color: white;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.5s;
 }
-
-.nav-bar-item:hover { color: darkgray; }
-
-#signup { background-color: forestgreen; border: 2px solid white; }
-
-#signup:hover { background-color: lawngreen; color: black; }
-
-#nav-bar-search {
-    width: 200px;
+.nav-bar-item:hover {color: darkgray;}
+#signup {background-color: forestgreen; border: 2px solid white;}
+#signup:hover {background-color: lawngreen; color: black;}
+#nav-bar-search {width: 200px;}
+#profile-pic {border-radius: 100%;}
+.dropdown-menu {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    left: 82%;
 }
-
-#profile-pic {
-    border-radius: 100%;
+ul {list-style: none;}
+.dropdown-menu li {
+    width: 100px;
+    text-align: left;
+    background-color: white;
+    font: 10pt "Arial";
+    color: black;
+    padding: 10px;
+    transition: 0.5s;
 }
+.dropdown-menu li a {color: black; text-decoration: none;}
+.dropdown-menu li:hover {background-color: #ebeaea;}
 
+/* SIDE BAR */
 #side-bar {
     float: left;
     background-color: lightgray;
@@ -71,6 +68,7 @@ body { margin: 0px;}
     height: 400px;
 }
 
+/* MAIN AREA */
 #project-description {
     float: left;
     background-color: white;
@@ -83,6 +81,6 @@ body { margin: 0px;}
     height: 200px;
 }
 
-#side-bar, #project-description, #workspace { width: 100%; padding: 20px; }
+#side-bar, #project-description, #workspace {width: 100%; padding: 20px;}
 
-.clearfix:after { content: ""; display: table; clear: both; }
+.clearfix:after {content: ""; display: table; clear: both;}

@@ -1,25 +1,36 @@
-window.LOGGED_IN = true;
-setup();
+$(document).ready(function(){
+    setup();
+    
+    $(".nav-bar-item").hover(function(){
+        $(".dropdown-menu", this).slideDown(100);
+    }, function(){
+        $(".dropdown-menu", this).stop().slideUp(100);
+    });
+})
 
 function setup(){
+    window.LOGGED_IN = true;
+    window.USERNAME = "mattCSguy";
+    
     if(window.LOGGED_IN) login();
     else logout();
 }
 
 function login() {
     // change nav bar
-    document.getElementById("login").style.display = "none";
-    document.getElementById("signup").style.display = "none";
-    document.getElementById("nav-bar-search").style.display = "block";
-    document.getElementById("profile-pic").style.display = "block";
+    $("#login").hide();
+    $("#signup").hide();
+    $("#nav-bar-search").show();
+    $("#profile-pic").show();
+    $("#username").text("Signed in as @" + window.USERNAME);
 }
 
 function logout() {
     // change nav bar
-    document.getElementById("login").style.display = "block";
-    document.getElementById("signup").style.display = "block";
-    document.getElementById("nav-bar-search").style.display = "none";
-    document.getElementById("profile-pic").style.display = "none";
+    $("#login").show();
+    $("#signup").show();
+    $("#nav-bar-search").hide();
+    $("#profile-pic").hide();
 }
 
 function createTask(name) {
