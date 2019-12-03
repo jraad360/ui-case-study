@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <title>Profile Page</title>
+    <!-- Reference to CSS stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style/profile.css">
+    <link rel="stylesheet" href="style/project-details.css">
+    <script src="https://kit.fontawesome.com/dc2ec09fd4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="script/profile.js"></script>
+    <script src="script/jquery.js"></script>
+    <script src="script/project-details.js"> </script>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <!-- HEADING DIV -->
+    <div class="heading">
+        <div id="nav-bar">
+            <a href="#home">
+                <img src="images/logo.png">
+            </a>
+            <a class="nav-bar-item" href="#aboutUs">About Us</a>
+            <a class="nav-bar-item" href="#explore">Explore</a>
+            <a class="nav-bar-item" href="#support">Support</a>
+            <div id="nav-bar-R" style="float: right; height: 100%">
+                <a class="nav-bar-item" id="login" href="#login">Login</a>
+                <a class="nav-bar-item" id="signup" href="#signup">Sign up</a>
+                <div class="nav-bar-item">
+                    <input type="text" id="nav-bar-search" placeholder="Search projects...">
+                </div>
+                <div class="nav-bar-item">
+                    <img id="profile-pic" src="images/profile_pic.jpg">
+                    <i class="fas fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                        <li id="username"></li>
+                        <li><a href="#profile">My profile</a></li>
+                        <li><a href="#projects">My projects</a></li>
+                        <li><a href="#help">Help</a></li>
+                        <li><a href="#profile-settings">Settings</a></li>
+                        <li><a href="#home">Sign out</a></li>
+                    </ul>
+                    <!-- drop-down icon-->
+                </div>
+            </div>
+            <!-- <ul>
+                <li><div style = "color: white; float: left; margin: 15px">Taskit</div></li>
+                <li>
+                    <button class="custom_button">About Us</button>
+                </li>
+                <li>
+                    <button class="custom_button">Explore</button>
+                </li>
+                <li>
+                    <button class="custom_button">Support</button>
+                </li>
+            </ul> -->
+        </div>
+
+        <!-- Body Container-->
+        <div class="body-container">
+            <!-- BOX 1 DIV -->
+            <div class="left-container">
+                <h1> My Profile</h1>
+                <button class="custom-tabs">
+                    Projects
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </button>
+                <button class="custom-tabs">
+                    Account Info
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </button>
+                <button class="custom-tabs">
+                    Messages
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </button>
+                <button class="custom-tabs" style="border-color: black #F2F2F2 black #F2F2F2; ">
+                    Settings
+                    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="right-container">
+                <img src="images/julian.jpg" alt="logo">
+                <div class="right-div">
+                    <form>
+                        Username<br>
+                        <input type="text" id="username-login"><br><br>
+                        Email Address<br>
+                        <input type="text" id="password-login"><br><br>
+                        New Password<br>
+                        <input type="text" id="password-login"><br><br>
+                        <button class="custom-button" type="button"> Update</button>
+
+                    </form>
+                </div>
+            </div>
+</body>
+
+</html>
