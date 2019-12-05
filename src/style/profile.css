@@ -1,0 +1,85 @@
+/* HEADER & MENU STYLING*/
+.heading {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 9999;
+}
+
+
+/* .heading ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.heading li {
+  float: left;
+} */
+
+.custom_button {
+    background-color: #333333;
+    margin: 5px 10px 5px 10px;
+    padding: 12px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-color: white;
+    border-radius: 8px; 
+}
+
+/* Body Styling */
+.body-container {
+    margin-top: 50px;
+}
+.left-container {
+    float: left;
+    display: block;
+    text-align: center;
+    background-color: lightgray;
+    width: 16.66%;
+    padding-bottom: 500px;
+}
+
+.custom-tabs {
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    border-color: black #F2F2F2 #F2F2F2 #F2F2F2;   
+    font-size: 20px;
+}
+
+.custom-tabs i {
+    float: right;
+    margin: 0px 5px;
+}
+
+.right-container {
+    float: right;
+    display: flex;
+    background-color:white;
+    width: 67%;
+    padding-bottom: 500px;
+}
+
+.right-container img {
+    height: 167px;
+    width: 208px;
+    margin: 100px 50px 0px 20px;
+}
+
+.right-div{
+    margin: 100px 10px 0px 50px; 
+}
+
+input{
+    width: 300px;
+}
+
+form{
+    font-size: 20px;
+  
+  
+}

@@ -1,0 +1,47 @@
+<head>
+    <link rel="stylesheet" href="homepage.css"> 
+      <title>Taskit Home</title>
+  </head>
+<body>
+    <div id="nav-bar">
+        <a href="homepage.html">
+            <img src="images/logo.png">
+        </a>
+        <a class="nav-bar-item" href="#aboutUs">About Us</a>
+        <a class="nav-bar-item" href="#explore">Explore</a>
+        <a class="nav-bar-item" href="#support">Support</a>
+        <div id="nav-bar-R" style="float: right; height: 100%">
+            <a class="nav-bar-item" id="login" href="LoginForm.html">Login</a>
+            <a class= "nav-bar-item" id="signup" href="RegisterForm.html">Sign up</a>
+            <div class="nav-bar-item">
+                <input type="text" id="nav-bar-search" placeholder="Search projects...">
+            </div>
+            <div class="nav-bar-item">
+                <img id="profile-pic" src="images/profile_pic.jpg">
+                <i class="fas fa-angle-down"></i>
+                <ul class="dropdown-menu">
+                    <li id="username"></li>
+                    <li><a href="#profile">My profile</a></li>
+                    <li><a href="#projects">My projects</a></li>
+                    <li><a href="#help">Help</a></li>
+                    <li><a href="#profile-settings">Settings</a></li>
+                    <li><a href="#home">Sign out</a></li>
+                </ul>
+                <!-- drop-down icon-->
+            </div>
+        </div>
+    </div>
+    <div class = "form big">
+        <form action="/action_page.php" target ="_blank" "class="form-container" id = "loginForm">
+            <h3>Account Information</h3><br>
+            <h4>Username</h4>
+                <input type="email" name="Username" required placeholder="email address">
+            <h4>Password</h4>
+                <input type="password" name="Password" required placeholder="password">
+            
+                <input type="submit" value="Log In" onclick=checkCookieLogin()>
+        </form> 
+    </div> 
+
+<script src = "homepage.js"></script>
+<script src = "homepage-jquery.js"></script>
