@@ -11,29 +11,57 @@ body {
 img{
   width: 2%;
 }
-/*Styling of Menu Bar*/
-.menuBar{
-	list-style-type: none;
-    margin:1%;
-    padding:3%;
-    overflow: hidden;
-    border: 1px solid #a990ee;
-    border-radius: 25%;
-    text-align: center;
-    }
-  /*Icon in Menu Bar*/
-  .mainLogo{
-    float: left;
-    width: 40%;
-    margin: 1px;
-  }
-  /*Title of Web Page*/
-  .mainTitle{
+body {margin-top: 80px;}
+#main-container {margin: 0px; padding: 0px;}
+
+/* NAV BAR */
+#nav-bar {
+  top: 0;
+  background-color: black;
+  padding: 10px;
+  margin: 0px;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+}
+#nav-bar img {float: left; height: 100%;}
+.nav-bar-item {
+  float: left;
+  height: 100%;
+  border-radius: 10%;
+  text-align: center;
+  padding: 5px;
+  margin: 0px 5px 0px 5px;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.nav-bar-item:hover {color: darkgray;}
+#signup {background-color: forestgreen; border: 2px solid white;}
+#signup:hover {background-color: lawngreen; color: black;}
+#nav-bar-search {width: 200px;}
+#profile-pic {border-radius: 100%;}
+.dropdown-menu {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  left: 90%;
+  top: 50px;
+  border: 2px solid lightgray;
+}
+ul {list-style: none; margin: 0px; padding: 0px;}
+.dropdown-menu li {
+    width: 100px;
+    text-align: left;
+    background-color: white;
+    font: 10pt "Arial";
     color: black;
-    padding: 0px 12px;
-    float: left;
-    font-size: xx-large;
-  }
+    padding: 10px;
+    transition: 0.5s;
+}
+.dropdown-menu li a {color: black; text-decoration: none;}
+.dropdown-menu li:hover {background-color: #ebeaea;}
+
 
 /*Body Styling*/
 /* Create two unequal columns that floats next to each other */
@@ -60,6 +88,14 @@ img{
     display: table;
     clear: both;
   }
+  /*event navigation*/
+  /* SIDE BAR */
+  /*
+.left {float: left; background-color: lightgray; width: 100%; height: 1000px;}
+.left h2 {margin: 0px 0px 5px 0px;}
+.left ul {margin: 0px; padding: 0px; font-weight: bold;}
+.sublist {font-size: 10pt; color: #404040;}
+*/
 
   /* Rows of events */
   .row{
@@ -96,7 +132,7 @@ img{
   }
   .sublist{
       font-size: large;
-
+      margin:10px;
 
   }
   .sublist li:hover{

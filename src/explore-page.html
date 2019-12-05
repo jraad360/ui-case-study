@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- TODO: set title to project name -->
+        <title>Explore Page</title>
+        <link rel="stylesheet" href="style/explore-page.css">
+        <script src="https://kit.fontawesome.com/dc2ec09fd4.js" crossorigin="anonymous"></script>
+        <script src="script/jquery.js"></script>
+        <script src="script/project-details.js">
+        </script>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="nav-bar">
+                <a href="#home">
+                    <img src="images/logo.png">
+                </a>
+                <a class="nav-bar-item" href="#aboutUs">About Us</a>
+                <a class="nav-bar-item" href="#explore">Explore</a>
+                <a class="nav-bar-item" href="#support">Support</a>
+                <div id="nav-bar-R" style="float: right; height: 100%">
+                    <a class="nav-bar-item" id="login" href="#login">Login</a>
+                    <a class= "nav-bar-item" id="signup" href="#signup">Sign up</a>
+                    <div class="nav-bar-item">
+                        <input type="text" id="nav-bar-search" placeholder="Search projects...">
+                    </div>
+                    <div class="nav-bar-item">
+                        <img id="profile-pic" src="images/profile_pic.jpg">
+                        <i class="fas fa-angle-down"></i>
+                        <ul class="dropdown-menu">
+                            <li id="username"></li>
+                            <li><a href="#profile">My profile</a></li>
+                            <li><a href="#projects">My projects</a></li>
+                            <li><a href="#help">Help</a></li>
+                            <li><a href="#profile-settings">Settings</a></li>
+                            <li><a href="#home">Sign out</a></li>
+                        </ul>
+                        <!-- drop-down icon-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--Body: Left column-->
+            <div class="col-2">
+                <div id="side-bar">
+                    <h2>My Projects</h2>
+                    <ul class ="categories">
+                        <li id=toggleMe1>Event Type</li>
+                            <ul class = "sublist" id=cat1>
+                                <li>Art</li>
+                                <li>Music</li>
+                                <li>Outdoors</li>
+                                <li>Sports</li>
+                                <li>Other</li></ul>
+                        </li>
+                    </ul>
+                    <ul class ="categories">
+                        <li id=toggleMe2>Age Group</li> <ul class = "sublist" id = cat2>
+                            <li>Children</li>
+                            <li>Teenagers</li>
+                            <li>Young Adults</li>
+                            <li>Adults</li>
+                            <li>Older Adults</li>
+                            <li>All ages</li></ul>
+                    </ul>
+                </div>
+            </div>
+
+    <!--Body: Right Column-->
+    <!--This side has little boxes of the events-->
+    <div class ="col right">
+            <div class="col-9">
+                <div id="project-description">
+                    <h1 id="project-name">Explore Page</h1>
+                    <p>In addition to planning work projects, the page allows for one to navigate and discover events going on in the local area. This helps our users achieve a work-life balance.</p>
+                </div>
+
+                <div class ="row" id=crow1>
+                    <h2>Adults Events</h2>
+                    <div class = "card" id=c1 onclick="editCard('c1')">
+                        <h2>Event name</h2>
+                        Event description                    <!-- <img src="love-empty.png">-->
+                    </div>
+    
+                    <div class = "card">
+                        <h2>Event name</h2>
+                        Event description                     <img src="love-empty.png">
+                    </div>
+    
+                    <div class = "card">
+                        <h2>Event name</h2>
+                        Event description 
+                       <!-- <img src="love-empty.png">-->
+                    </div>
+                    <div id='less1' class="origNoShow">
+                            <div class = "card">
+                                    <h2>Event name</h2>
+                                    Event description
+                            </div>
+                            <div class = "more" onclick="showLess('more1','less1')">
+                                    Show less
+                            </div>
+                    </div>
+                    <div class = "more" id=more1 onclick="showMore('more1','less1')">
+                        Show more
+                    </div>
+    
+                </div>
+    
+                <div class ="row" id=crow2>
+                        <h2>Art Events</h2>
+                        <div class = "card">
+                            <h2>Event name</h2>
+                            Event description
+                        </div>
+        
+                        <div class = "card">
+                            <h2>Event name</h2>
+                            Event description
+                        </div>
+        
+                        <div class = "card">
+                            <h2>Event name</h2>
+                            Event description
+                        </div>
+                        <div id='less2' class="origNoShow">
+                                <div class = "card">
+                                        <h2>Event name</h2>
+                                        Event description
+                                </div>
+                                <div class = "more" onclick="showLess('more2','less2')">
+                                        Show less
+                                </div>
+                        </div>
+                        <div class = "more" id=more2 onclick="showMore('more2','less2')">
+                            Show more
+                        </div>
+        
+                </div>
+    
+                <div class ="row" id=crow3>
+                            <h2>Children Events</h2>
+                            <div class = "card">
+                                <h2>Event name</h2>
+                                Event description
+                            </div>
+            
+                            <div class = "card">
+                                <h2>Event name</h2>
+                                Event description
+                            </div>
+            
+                            <div class = "card">
+                                <h2>Event name</h2>
+                                Event description
+                            </div>
+                            <div id='less3' class="origNoShow">
+                                    <div class = "card">
+                                            <h2>Event name</h2>
+                                            Event description
+                                    </div>
+                                    <div class = "more" onclick="showLess('more3','less3')">
+                                            Show less
+                                    </div>
+                            </div>
+                            <div class = "more" id=more3 onclick="showMore('more3','less3')">
+                                Show more
+                            </div>
+            
+                </div>
+    
+                        
+                <div class ="row" id=crow4>
+                            <h2>Music Events</h2>
+                            <div class = "card">
+                                <h2>Event name</h2>
+                                Event description
+                            </div>
+            
+                            <div class = "card">
+                                <h2>Event name</h2>
+                                Event description
+                            </div>
+            
+                            <div class = "card">
+                                <h2>Event name</h2>
+                                Event description
+                            </div>
+                            <div id='less4' class="origNoShow">
+                                    <div class = "card">
+                                            <h2>Event name</h2>
+                                            Event description
+                                    </div>
+                                    <div class = "more" onclick="showLess('more4','less4')">
+                                            Show less
+                                    </div>
+                            </div>
+                            <div class = "more" id=more4 onclick="showMore('more4','less4')">
+                                Show more
+                            </div>
+            
+                </div>
+    
+
+
+                
+                </div>
+            </div>
+        </div>
+    <script src = "script/explore-page.js"></script>
+    </body>
+
+</html>

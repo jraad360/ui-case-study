@@ -1,0 +1,143 @@
+/* BASIC STRUCTURE */
+* {box-sizing: border-box; font-family: Arial;}
+div [class*="col-"] {display: inline-block; float: left;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+body {margin-top: 40px;}
+#main-container {margin: 0px; padding: 0px;}
+
+/* NAV BAR */
+#nav-bar {
+    top: 0;
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+}
+#nav-bar img {float: left; height: 100%;}
+.nav-bar-item {
+    float: left;
+    height: 100%;
+    border-radius: 10%;
+    text-align: center;
+    padding: 5px;
+    margin: 0px 5px 0px 5px;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.nav-bar-item:hover {color: darkgray;}
+#signup {background-color: forestgreen; border: 2px solid white;}
+#signup:hover {background-color: lawngreen; color: black;}
+#nav-bar-search {width: 200px;}
+#profile-pic {border-radius: 100%;}
+.dropdown-menu {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    left: 90%;
+    top: 50px;
+    border: 2px solid lightgray;
+}
+ul {list-style: none; margin: 0px; padding: 0px;}
+.dropdown-menu li {
+    width: 100px;
+    text-align: left;
+    background-color: white;
+    font: 10pt "Arial";
+    color: black;
+    padding: 10px;
+    transition: 0.5s;
+}
+.dropdown-menu li a {color: black; text-decoration: none;}
+.dropdown-menu li:hover {background-color: #ebeaea;}
+
+/* SIDE BAR */
+#side-bar {float: left; background-color: lightgray; width: 100%; height: 1000px;}
+.side-bar-cat {font-size: 10pt; color: #404040;}
+.side-bar-cat li {display: none; padding-left: 10px;font-weight: normal;}
+.sublist{
+    font-size: small;
+    font-weight: lighter;
+    margin:10px;
+}
+.sublist li:hover{
+    color: rgb(72, 124, 170);
+}
+
+/* MAIN AREA */
+#project-description {
+    float: left;
+    background-color: white;
+    height: 200px;
+}
+
+#workspace {
+    float: left;
+    background-color: darkgray;
+}
+
+#side-bar, #project-description, #workspace {width: 100%; padding: 20px;}
+
+.clearfix:after {content: ""; display: table; clear: both;}
+
+
+
+ /* Rows of events */
+ .row{
+    float: top;
+    padding: 10px;
+    margin: 1px 5px 1px 1px;
+    background-color: darkgray;
+    box-shadow: 2px 2px 2px 2px;
+    border-bottom: 1px solid black;
+  }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+.card{
+    float:left;
+    padding: 10px;
+    margin: 1px 3px 1px 1px;
+    border: 2px solid grey;
+    position: relative;
+    width: 25%;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10pt;
+    font-size: 8pt;
+}
+.card:hover{
+  background-color:  rgb(15, 169, 207);
+}
+.more{
+  float: right;
+  padding: 10px;
+  margin: 1px 5px 1px 1px;
+  border: 2px solid grey;
+  border-radius: 10px;
+  position: relative;
+}
+.more:hover{
+    background-color: dimgray;
+}
+  /*initial condition*/
+  .origNoShow{
+    display: none;
+  }
