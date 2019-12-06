@@ -28,8 +28,7 @@ function showMore(hide, show){
 function openForm(myForm, eventName, card) {
     document.getElementById(card).style.background = "lightblue";
     document.getElementById(myForm).style.display = "block";
-    document.getElementsByClassName(eventN).innerHTML = "eventName";
-
+    document.getElementsById(eventN).innerHTML = eventName; /*THIS DOESN'T CHANGE THE CONTENT--HELP!!*/
   }
 
 /*Close form for card info*/
