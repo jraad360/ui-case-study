@@ -45,7 +45,7 @@
 <!--Body: Left column-->
             <div class="col-2">
                 <div id="side-bar">
-                    <h2>My Projects</h2>
+                    <h2>Explore Menu</h2>
                     <ul class ="categories">
                         <li id=toggleMe1>Event Type</li>
                             <ul class = "sublist" id=cat1>
@@ -65,6 +65,21 @@
                             <li>Older Adults</li>
                             <li>All ages</li></ul>
                     </ul>
+                    <h2>My Projects</h2>
+                    <ul>
+                        <li class="side-bar-cat"><i class="fas fa-caret-right"></i>All
+                            <ul>
+                                <li>User Interfaces Lab 1</li>
+                                <li>User Interfaces Lab 2</li>
+                                <li>User Interfaces Lab 3</li>
+                                <li>Control Eng. Lab</li>
+                                <li>Spain and the Americas Presentation</li>
+                            </ul>
+                        </li>
+                        <li class="side-bar-cat"><i class="fas fa-caret-right"></i>Recent</li>
+                        <li class="side-bar-cat"><i class="fas fa-caret-right"></i>In Progress</li>
+                        <li class="side-bar-cat"><i class="fas fa-caret-right"></i>Finished</li>
+                    </ul>
                 </div>
             </div>
 
@@ -77,20 +92,38 @@
                     <p>In addition to planning work projects, the page allows for one to navigate and discover events going on in the local area. This helps our users achieve a work-life balance.</p>
                 </div>
 
+                <!--More info-->
+                <div class="formpopup origNoShow" id="myForm1">
+                    <form action="/action_page.php" class="form-container">
+                      <h1 class = "shareboxTitle" id = "eventN">Event Name</h1>
+                      <p>More information about this event</p>
+                      <div class = Line2>
+                      <input type = "image" src="images/facebook_circle.png" class = "icon"></input>
+                      <input type = "image" src="images/twitter_circle.png" class = "icon"></input>
+                      <input type = "image" src="images/email_circle.png" class = "icon"></input>
+                      </div>
+          
+                      <button type="submit" class="btn">Share</button>
+                      <button type="button" class="btn cancel" onclick="closeForm('myForm1')"> Close</button>
+                    </form>
+          
+                  </div>
+
                 <div class ="row" id=crow1>
                     <h2>Adults Events</h2>
-                    <div class = "card" id=c1 onclick="editCard('c1')">
-                        <h2>Event name</h2>
-                        Event description                    <!-- <img src="love-empty.png">-->
+                    <div class = "card" id=c1 onclick="openForm('myForm1','Event1')">
+                        <h2>Adult Event 1</h2>
+                        Event description 
+                                           <!-- <img src="love-empty.png">-->
                     </div>
     
-                    <div class = "card">
-                        <h2>Event name</h2>
+                    <div class = "card" onclick="openForm('myForm1', 'Event2')">
+                        <h2>Adult Event 2</h2>
                         Event description                     
                     </div>
     
-                    <div class = "card">
-                        <h2>Event name</h2>
+                    <div class = "card" onclick="openForm('myForm1', 'Event3')">
+                        <h2>Adult Event 3</h2>
                         Event description 
                        <!-- <img src="love-empty.png">-->
                     </div>
