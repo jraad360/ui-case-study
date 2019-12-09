@@ -81,7 +81,12 @@ function expandTask(index){
         $("#tab2").css('background-color', 'white');
     }
 }
+
 function closeTask() {
     $("#dimming-screen").hide();
     $(".task-window").hide();
+}
+
+function searchTask(input) {
+    $();
 }
