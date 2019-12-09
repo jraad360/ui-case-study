@@ -148,3 +148,32 @@ ul {list-style: none; margin: 0px; padding: 0px;}
 .fa-caret-right, .fa-caret-down{padding-right: 10px;}
 div [class*="fa-"] {transition: 0.2s}
 div [class*="fa-"]:hover {color: darkgoldenrod}
+/*Footer Styling*/
+
+footer{
+    background-color: rgb(50, 50, 50);
+    position: absolute;
+    }
+
+#logoFooter{
+    height: auto;
+    max-width: 20%;
+    float:left;
+    margin-top: 80px;
+    margin-left: 5%;
+}
+
+  .footerLists{
+    float: left;
+    padding: 10px;
+    text-align: center;
+    margin: 0% 4% 0% 4%;
+    
+  }
+  .footerLinks a{
+      color: white;
+      text-decoration: none;
+  }
+  .footerLinks a:hover{
+      color: gray;
+  }

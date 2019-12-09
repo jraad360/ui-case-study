@@ -159,3 +159,40 @@ form{
     border-radius: 8px; 
     width: 20%;
  }
+ /*Footer Styling*/
+body{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+footer{
+    background-color: rgb(50, 50, 50);
+    bottom:150px;
+    }
+
+#logoFooter{
+    height: auto;
+    max-width: 20%;
+    float:left;
+    margin-top: 80px;
+    margin-left: 5%;
+}
+footer h4{
+    color:white;
+    font-size: 20px;
+}
+  .footerLists{
+    float: left;
+    padding: 10px;
+    text-align: center;
+    margin: 0% 4% 0% 4%;
+    
+  }
+  .footerLinks a{
+      color: white;
+      text-decoration: none;
+  }
+  .footerLinks a:hover{
+      color: gray;
+  }

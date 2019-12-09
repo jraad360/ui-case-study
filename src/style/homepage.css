@@ -97,11 +97,14 @@ input[type = submit]{
     background-color: lightskyblue;
 }
 .secondThird{
-    position: relative;
+    position:relative;
 }
 .lastThird h1{
     margin-left: 33%;
-    position: relative;
+}
+.lastThird{
+    position:relative;
+    margin-bottom: 200px;
 }
 #logoBottom{
     max-width: 50%;
@@ -112,7 +115,9 @@ input[type = submit]{
 
 footer{
     background-color: rgb(50, 50, 50);
-    position: absolute;
+    position: fixed;
+    bottom: 0;
+    left: 0px;
     }
 
 #logoFooter{
