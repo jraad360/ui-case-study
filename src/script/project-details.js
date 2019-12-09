@@ -60,3 +60,7 @@ function createCategory(name) {
 function addTask(task) {
     this.appendChild(task);
 }
+
+function expandTask(){
+    
+}
