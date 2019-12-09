@@ -90,7 +90,7 @@
                 <div id="project-description">
                     <h1 id="project-name">Explore Page</h1>
                     <p>In addition to planning work projects, the page allows for one to navigate and discover events going on in the local area. This helps our users achieve a work-life balance.</p>
-                    <p> <img src = "images/help-512.png" class = "smallIcon"> Click on an event to see more information about it.</p>
+                    <p class="helping"> <img src = "images/help-512.png" class = "smallIcon"> Click on an event to see more information about it.</p>
                 </div>
 
                 <!--More info-->
@@ -109,6 +109,39 @@
                     </form>
           
                   </div>
+
+                  <div class ="row" id=crow>
+                    <h2>Events For You</h2>
+                    <div class = "card" id=c01 onclick="openForm('myForm1','sugEvent1','c01')">
+                        <h2>Suggested Event 1</h2>
+                        Event description
+                                           <!-- <img src="love-empty.png">-->
+                    </div>
+    
+                    <div class = "card" id=c02 onclick="openForm('myForm1', 'sugEvent2','c02')">
+                        <h2>Suggested Event 2</h2>
+                        Event description                     
+                    </div>
+    
+                    <div class = "card" id=c3 onclick="openForm('myForm1', 'sugEvent3','c03')">
+                        <h2>Suggested Event 3</h2>
+                        Event description 
+                       <!-- <img src="love-empty.png">-->
+                    </div>
+                    <div id='less0' class="origNoShow">
+                            <div class = "card"  id=c04 onclick="openForm('myForm1', 'Event4','c04')">
+                                    <h2>Suggested Event 4</h2>
+                                    Event description
+                            </div>
+                            <div class = "more" onclick="showLess('more0','less0')">
+                                    Show less
+                            </div>
+                    </div>
+                    <div class = "more" id=more0 onclick="showMore('more0','less0')">
+                        Show more
+                    </div>
+    
+                </div>
 
                 <div class ="row" id=crow1>
                     <h2>Adults Events</h2>
