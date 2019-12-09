@@ -152,7 +152,7 @@ div [class*="fa-"]:hover {color: darkgoldenrod}
 
 footer{
     background-color: rgb(50, 50, 50);
-    position: absolute;
+    position: fixed;
     }
 
 #logoFooter{
@@ -161,6 +161,9 @@ footer{
     float:left;
     margin-top: 80px;
     margin-left: 5%;
+}
+footer h4{
+    color: white;
 }
 
   .footerLists{
