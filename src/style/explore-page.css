@@ -162,6 +162,17 @@ ul {list-style: none; margin: 0px; padding: 0px;}
     width: 10%
   }
 
+  /*help part*/
+  .smallIcon{
+    width: 2.5%;
+  }
+  .helping{
+    color: grey;
+  }
+  .helping:hover{
+    color:black;
+  }
+
   /*Footer Styling*/
 
 footer{
