@@ -5,18 +5,6 @@
       document.getElementById("content").style.display = "none";
       document.getElementById("loginProfile").style.display = "block";
   }
-
-  function loginFunc(){
-      document.getElementById("loginForm").style.display ="block";
-      document.getElementById("registerForm").style.display ="none";
-
-  }
-
-  function registerFunc(){
-    document.getElementById("registerForm").style.display ="block";
-    document.getElementById("loginForm").style.display ="none";
-
-  }
 /*Jorge code */
   $(document).ready(function(){
     setup();
@@ -60,44 +48,64 @@ function logout() {
     $("#profile-pic").hide();
 }
 
-  function checkUsername(cname){
-      var name = cname +"=";
-      var allNames = document.cookie.split(";");
-      for(var i = 0; i < allNames.length; i++){
-          var a = allNames[i];
-          while(a.charAt(0)==' '){
-              c = c.substring(1);
-          }
-          if(c.indexOf(name) == 0){
-              return true;
-          }
-      }
-      return false; //NOT SURE IF THIS IS WHAT TO RETURN??
-      
-  }
-  /*Takes info from form and passes to setCookie */
-  function cookieName(email, formInfo){
-    var info = ""
-    for (i = 0; i < formInfo.length ;i++) {
-        info += formInfo.elements[i].value;
-      }
-    setCookie(email, info);
-    return ""
-  }
+/*COOKIE ACCOUNT FORMULAS*/
 
-  function setCookie(cname, cvalue){
-      document.cookie = cname + "=" + cvalue +";";
-  }
+/*Takes info from form and passes to setCookie */
+function cookieName(username, formInfo){
+  var info = ""
+  for (i = 0; i < formInfo.length ;i++) {
+      info += formInfo.elements[i].value;
+    }
+  setCookie(username, info);
+  return ""
+}
 
-  function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for(var i = 0; i <ca.length; i++) {
-      var c = ca[i];
-      console.log(c);
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
+function setCookie(cname, cvalue){
+    document.cookie = cname + "=" + cvalue +";";
+}
+/**Checks for cookie */
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "none";
+}
+/** Check for registered account, triggered onClick of create account button */
+function checkCookieRegister(){
+  var formInfo = document.getElementById("registerForm");
+  var userEmail = formInfo.elements[4].value;
+  var unCookie = getCookie(userEmail);
+  if(unCookie == "none"){
+        cookieName(userEmail, formInfo);
+        newUserName(userEmail); //Displays new page with this username
+    } else{
+        /**ToDo: alert: account already exists with this email */
+        alert("There is already a user with this email: " + unCookie);
+    }
+}
+
+/**ToDo: Checks login info, triggered onClick of login. If correct, load user page */
+function checkCookieLogin(){
+  var formArray = document.getElementById("loginForm");
+  var username = formArray.elements[0].value; 
+  var unCookie = getCookie(username);
+    if(unCookie == "none"){
+        alert("There is no registered user: " + username);
+    } else{
+        newUserName(username);
+    }
+}
+
+//Displays event management page
+function newUserName(name){
+    alert("login successful");
+}
