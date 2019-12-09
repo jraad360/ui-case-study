@@ -100,7 +100,6 @@ ul {list-style: none; margin: 0px; padding: 0px;}
 .category {
     background-color: lightgray;
     width: 30%;
-    text-align: center;
     border-radius: 5%;
     padding: 10px;
     display: inline-block;
@@ -108,7 +107,7 @@ ul {list-style: none; margin: 0px; padding: 0px;}
     margin: 10px;
     box-shadow: 2px 2px 2px 2px;
 }
-.category h3 {margin: 0px;}
+.category h3 {margin: 0 0 0 20px;}
 
 .task {
     text-align: left;
@@ -119,6 +118,16 @@ ul {list-style: none; margin: 0px; padding: 0px;}
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10%;
     font-size: 8pt;
+}
+#task-searchbar {
+    float: right;
+    vertical-align: text-top;
+}
+#filter-tasks {
+    background: lightgray;
+    padding: 5px;
+    border-radius: 10%;
+    margin: 5px;
 }
 .task h4 {margin: 0px;}
 
@@ -241,3 +250,8 @@ form{font-size: 20px;}
     border-radius: 8px; 
     width: 20%;
  }
+
+.ellipsis {
+    float: right;
+    vertical-align: text-top;
+}

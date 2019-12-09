@@ -135,8 +135,9 @@
                     <p>The objective of this exercise is to design a platform to manage tasks and events. The webpage can be used with or without registering on the website. The design of the platform will follow the user-centred design methodology as explained in the following section. The platform should be able to be used with a desktop, tablet or mobile device.</p>
                 </div>
                 <div id="workspace">
-                    <h2>Tasks</h2>
+                    <h2>Tasks<div id="task-searchbar"><input type="text" id="nav-bar-search" placeholder="Search tasks..."><i id="filter-tasks" class="fas fa-filter"></i></div></h2>
                     <div class="category">
+                        <i class="fas fa-ellipsis-v ellipsis" onclick="openCategorySettings()"></i>
                         <h3>TO DO</h3>
                         <div class="task">
                             <h4>Sample Phone Version</h4>
@@ -163,7 +164,7 @@
                         </div>
                     </div>
                     <div class="category">
-                        <h3>DOING</h3>
+                        <i class="fas fa-ellipsis-v ellipsis" onclick="openCategorySettings()"></i><h3>DOING</h3>
                         <div class="task">
                             <h4>Project Details Page</h4>
                             <p class="date">Deadline: 12/12/19 23:59</p>
@@ -189,7 +190,7 @@
                         </div>
                     </div>
                     <div class="category">
-                        <h3>DONE</h3>
+                        <i class="fas fa-ellipsis-v ellipsis" onclick="openCategorySettings()"></i><h3>DONE</h3>
                         <div class="task">
                             <h4>Written Assignment</h4>
                             <p class="date">Deadline: 12/12/19 23:59</p>
