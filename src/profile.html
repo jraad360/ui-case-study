@@ -65,32 +65,92 @@
                     Messages
                     <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 </button>
-                <button class="custom-tabs" id="settings_tab"
-                style="border-color: black #F2F2F2 black #F2F2F2; ">
+                <button class="custom-tabs" id="settings_tab" style="border-color: black #F2F2F2 black #F2F2F2; ">
                     Settings
                     <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
                 </button>
             </div>
 
             <div class="right-container">
-                <div class="successful_update">
-                    You've successfully updated your account info!
-                </div>
-                <div style="display: flex"> 
-                    <img src="images/julian.jpg" alt="logo">
-                    <div class="right-div">
-                        <form id="update_account_form" name = "update_account_form">
-                            Username<br>
-                            <input type="text" name="username-login"><br><br>
-                            Email Address<br>
-                            <input type="text" name="email-login"><br><br>
-                            New Password<br>
-                            <input type="text" id="password-login"><br><br>
-                            <button class="custom_button" type="button" id="update_button"> Update</button>
+                <div class="messages">
+                    <div class="contact-tab">
+                        <ul>
+                            <li>
+                                <div class="contact">
+                                    <img src="images/julian.jpg" alt="logo">
+                                    <p>Julian Smith</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact" style="background : #343434">
+                                    <img src="images/kermit.jpeg" alt="logo">
+                                    <p>Kermit Frog</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact">
+                                    <img src="images/peppa.jpg" alt="logo">
+                                    <p>Peppa Pig</p>
+                                </div>
 
+                            </li>
+                            <li>
+                                <div class="contact">
+                                    <img src="images/miffy.jpg" alt="logo">
+                                    <p>Miffy Rabbit</p>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="contact">
+                                    <img src="images/spongebob.jpg" alt="logo">
+                                    <p>Spongebob Squarepants</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="message_container">
+                        <div class="container">
+                            <p>Hello. How are you today?</p>
+                        </div>
+                        <div class="container blue">
+                            <p>Hello. I saw you were stuck do you need help?</p>
+                        </div>
+                        <div class="container">
+                            <p>Yes. Are you free today?</p>
+                        </div>
+                        <div class="container blue">
+                            <p>I am, let me schedule time with you.</p>
+                        </div>
+                        <form name="message" action="">
+                            <input name="usermsg" type="text" id="usermsg" size="100" />
+                            <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
                         </form>
+
                     </div>
                 </div>
+
+                <div class = "account_info">
+                    <div class="successful_update">
+                        You've successfully updated your account info!
+                    </div>
+                    <div style="display: flex">
+                        <img src="images/julian.jpg" alt="logo">
+                        <div class="right-div">
+                            <form id="update_account_form" name="update_account_form">
+                                Username<br>
+                                <input type="text" name="username-login"><br><br>
+                                Email Address<br>
+                                <input type="text" name="email-login"><br><br>
+                                New Password<br>
+                                <input type="text" id="password-login"><br><br>
+                                <button class="custom_button" type="button" id="update_button"> Update</button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 </body>

@@ -8,20 +8,32 @@ $(document).ready(function() {
         }
     });
 
-    $("#project_tab").click(function () {
-
-    });
 
     $("#account_info_tab").click(function() {
         defaults();
+
     });
 
-    $("message_tab").click (function() {
+    $("#message_tab").click (function() {
+        resets();
+        $(".account_info").hide();
+        $("#message_tab").css({
+            "background-color": "#333333",
+            "color": "white"
+        });
 
+       
+        $(".messages").show();
     });
 
     $("settings_tab").click(function() {
 
+    });
+
+    $("#submitmsg").click(function() {
+        var val = $("#usermsg").val();
+        console.log("User Input = ", val);
+        $(".message_container").append("<div class='container blue' <p>" + val + "</p></div>")
     });
 
 
@@ -42,8 +54,18 @@ function validate_form(){
 
 function defaults() {
     console.log("Setup completed");
+    $(".messages").hide(); 
+    $(".account_info").show();
+    resets();
     $("#account_info_tab").css({
         "background-color": "#333333",
         "color": "white"
     });
+}
+
+function resets() {
+    $("#account_info_tab, #message_tab").css({
+        "background-color": "white",
+        "color": "black"
+    }); 
 }
