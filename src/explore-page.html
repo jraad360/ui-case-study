@@ -16,12 +16,12 @@
                 <a href="#home">
                     <img src="images/logo.png">
                 </a>
-                <a class="nav-bar-item" href="#aboutUs">About Us</a>
-                <a class="nav-bar-item" href="#explore">Explore</a>
-                <a class="nav-bar-item" href="#support">Support</a>
+                <a class="nav-bar-item" href="#aboutUs">About Us</a> <!--TODO: ADD LINK-->
+                <a class="nav-bar-item" href="#explore">Explore</a> <!--TODO: ADD LINK-->
+                <a class="nav-bar-item" href="#support">Support</a> 
                 <div id="nav-bar-R" style="float: right; height: 100%">
-                    <a class="nav-bar-item" id="login" href="#login">Login</a>
-                    <a class= "nav-bar-item" id="signup" href="#signup">Sign up</a>
+                    <a class="nav-bar-item" id="login" href="#login">Login</a> <!--TODO: ADD LINK-->
+                    <a class= "nav-bar-item" id="signup" href="#signup">Sign up</a> <!--TODO: ADD LINK-->
                     <div class="nav-bar-item">
                         <input type="text" id="nav-bar-search" placeholder="Search projects...">
                     </div>
@@ -30,11 +30,11 @@
                         <i class="fas fa-angle-down"></i>
                         <ul class="dropdown-menu">
                             <li id="username"></li>
-                            <li><a href="#profile">My profile</a></li>
-                            <li><a href="#projects">My projects</a></li>
+                            <li><a href="#profile">My profile</a></li> <!--TODO: ADD LINK-->
+                            <li><a href="#projects">My projects</a></li> <!--TODO: ADD LINK-->
                             <li><a href="#help">Help</a></li>
-                            <li><a href="#profile-settings">Settings</a></li>
-                            <li><a href="#home">Sign out</a></li>
+                            <li><a href="#profile-settings">Settings</a></li> <!--TODO: ADD LINK-->
+                            <li><a href="#home">Sign out</a></li> <!--TODO: ADD LINK-->
                         </ul>
                         <!-- drop-down icon-->
                     </div>
@@ -45,7 +45,7 @@
 <!--Body: Left column-->
             <div class="col-2">
                 <div id="side-bar">
-                    <h2>My Projects</h2>
+                    <h2>Explore Menu</h2>
                     <ul class ="categories">
                         <li id=toggleMe1>Event Type</li>
                             <ul class = "sublist" id=cat1>
@@ -65,6 +65,21 @@
                             <li>Older Adults</li>
                             <li>All ages</li></ul>
                     </ul>
+                    <h2>My Projects</h2> <!--TODO: ADD LINK TO PROJECTS PAGE-->
+                    <ul>
+                        <li class="side-bar-cat"><i class="fas fa-caret-right"></i>All
+                            <ul>
+                                <li>User Interfaces Lab 1</li>
+                                <li>User Interfaces Lab 2</li>
+                                <li>User Interfaces Lab 3</li>
+                                <li>Control Eng. Lab</li>
+                                <li>Spain and the Americas Presentation</li>
+                            </ul>
+                        </li>
+                        <li class="side-bar-cat"><i class="fas fa-caret-right"></i>Recent</li>
+                        <li class="side-bar-cat"><i class="fas fa-caret-right"></i>In Progress</li>
+                        <li class="side-bar-cat"><i class="fas fa-caret-right"></i>Finished</li>
+                    </ul>
                 </div>
             </div>
 
@@ -77,26 +92,44 @@
                     <p>In addition to planning work projects, the page allows for one to navigate and discover events going on in the local area. This helps our users achieve a work-life balance.</p>
                 </div>
 
+                <!--More info-->
+                <div class="formpopup origNoShow" id="myForm1">
+                    <form action="/action_page.php" class="form-container">
+                      <h1 class = "shareboxTitle" id = "eventN">Event Name</h1>
+                      <p id=eventN>More information about this event</p>
+                      <div class = Line2>
+                      <input type = "image" src="images/facebook_circle.png" class = "icon"></input>
+                      <input type = "image" src="images/twitter_circle.png" class = "icon"></input>
+                      <input type = "image" src="images/email_circle.png" class = "icon"></input>
+                      </div>
+          
+                      <button type="submit" class="btn">Share</button>
+                      <button type="button" class="btn cancel" onclick="closeForm('myForm1')"> Close</button>
+                    </form>
+          
+                  </div>
+
                 <div class ="row" id=crow1>
                     <h2>Adults Events</h2>
-                    <div class = "card" id=c1 onclick="editCard('c1')">
-                        <h2>Event name</h2>
-                        Event description                    <!-- <img src="love-empty.png">-->
+                    <div class = "card" id=c1 onclick="openForm('myForm1','AdultEvent1','c1')">
+                        <h2>Adult Event 1</h2>
+                        Event description 
+                                           <!-- <img src="love-empty.png">-->
                     </div>
     
-                    <div class = "card">
-                        <h2>Event name</h2>
+                    <div class = "card" id=c2 onclick="openForm('myForm1', 'Event2','c2')">
+                        <h2>Adult Event 2</h2>
                         Event description                     
                     </div>
     
-                    <div class = "card">
-                        <h2>Event name</h2>
+                    <div class = "card" id=c3 onclick="openForm('myForm1', 'Event3','c3')">
+                        <h2>Adult Event 3</h2>
                         Event description 
                        <!-- <img src="love-empty.png">-->
                     </div>
                     <div id='less1' class="origNoShow">
-                            <div class = "card">
-                                    <h2>Event name</h2>
+                            <div class = "card"  id=c4 onclick="openForm('myForm1', 'Event4','c4')">
+                                    <h2>Adult Event 4</h2>
                                     Event description
                             </div>
                             <div class = "more" onclick="showLess('more1','less1')">
@@ -111,22 +144,22 @@
     
                 <div class ="row" id=crow2>
                         <h2>Art Events</h2>
-                        <div class = "card">
+                        <div class = "card" id=c21 onclick="openForm('myForm1', 'Event21','c21')">
                             <h2>Event name</h2>
                             Event description
                         </div>
         
-                        <div class = "card">
+                        <div class = "card" id=c22 onclick="openForm('myForm1', 'Event22','c22')">
                             <h2>Event name</h2>
                             Event description
                         </div>
         
-                        <div class = "card">
+                        <div class = "card" id=c23 onclick="openForm('myForm1', 'Event23','c23')">
                             <h2>Event name</h2>
                             Event description
                         </div>
                         <div id='less2' class="origNoShow">
-                                <div class = "card">
+                                <div class = "card" id=c24 onclick="openForm('myForm1', 'Event41','c24')">
                                         <h2>Event name</h2>
                                         Event description
                                 </div>
@@ -142,22 +175,22 @@
     
                 <div class ="row" id=crow3>
                             <h2>Children Events</h2>
-                            <div class = "card">
+                            <div class = "card" id=c31 onclick="openForm('myForm1', 'Event31','c31')">
                                 <h2>Event name</h2>
                                 Event description
                             </div>
             
-                            <div class = "card">
+                            <div class = "card" id=c32 onclick="openForm('myForm1', 'Event32','c32')">
                                 <h2>Event name</h2>
                                 Event description
                             </div>
             
-                            <div class = "card">
+                            <div class = "card" id=c33 onclick="openForm('myForm1', 'Event33','c33')">
                                 <h2>Event name</h2>
                                 Event description
                             </div>
                             <div id='less3' class="origNoShow">
-                                    <div class = "card">
+                                    <div class = "card" id=c34 onclick="openForm('myForm1', 'Event34','c34')">
                                             <h2>Event name</h2>
                                             Event description
                                     </div>
@@ -174,22 +207,22 @@
                         
                 <div class ="row" id=crow4>
                             <h2>Music Events</h2>
-                            <div class = "card">
+                            <div class = "card" id=c41 onclick="openForm('myForm1', 'Event41','c41')">
                                 <h2>Event name</h2>
                                 Event description
                             </div>
             
-                            <div class = "card">
+                            <div class = "card" id=c42 onclick="openForm('myForm1', 'Event42','c42')">
                                 <h2>Event name</h2>
                                 Event description
                             </div>
             
-                            <div class = "card">
+                            <div class = "card" id=c43 onclick="openForm('myForm1', 'Event43','c43')">
                                 <h2>Event name</h2>
                                 Event description
                             </div>
                             <div id='less4' class="origNoShow">
-                                    <div class = "card">
+                                    <div class = "card" id=c44 onclick="openForm('myForm1', 'Event44','c44')">
                                             <h2>Event name</h2>
                                             Event description
                                     </div>

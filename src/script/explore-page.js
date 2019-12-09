@@ -23,7 +23,16 @@ function showMore(hide, show){
     document.getElementById(hide).style.display = "none";
 }
 
-function editCard(card){
-    document.getElementById(card).style.background = "blue"; //not what I want to do but just a place holder
-}
+
+/*Open form for card info*/
+function openForm(myForm, eventName, card) {
+    document.getElementById(card).style.background = "lightblue";
+    document.getElementById(myForm).style.display = "block";
+    document.getElementsById(eventN).innerHTML = eventName; /*THIS DOESN'T CHANGE THE CONTENT--HELP!!*/
+  }
+
+/*Close form for card info*/
+  function closeForm(myForm) {
+    document.getElementById(myForm).style.display = "none";
+  }
 
