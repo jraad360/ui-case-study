@@ -1,93 +1,94 @@
 <html>
-  <head>
-    <link rel="stylesheet" href="style/homepage.css"> 
-      <title>Taskit Home</title>
-  </head>
-<body>
-<div id="nav-bar">
-        <a href="homepage.html">
-            <img src="images/logo.png">
-        </a>
-        <a class="nav-bar-item" href="#aboutUs">About Us</a>
-        <a class="nav-bar-item" href="#explore">Explore</a>
-        <a class="nav-bar-item" href="#support">Support</a>
-        <div id="nav-bar-R" style="float: right; height: 100%">
-            <a class="nav-bar-item" id="login" href="LoginForm.html">Login</a>
-            <a class= "nav-bar-item" id="signup" href="RegisterForm.html">Sign up</a>
-            <div class="nav-bar-item">
-                <input type="text" id="nav-bar-search" placeholder="Search projects...">
-            </div>
-            <div class="nav-bar-item">
-                <img id="profile-pic" src="images/profile_pic.jpg">
-                <i class="fas fa-angle-down"></i>
-                <ul class="dropdown-menu">
-                    <li id="username"></li>
-                    <li><a href="#profile">My profile</a></li>
-                    <li><a href="#projects">My projects</a></li>
-                    <li><a href="#help">Help</a></li>
-                    <li><a href="#profile-settings">Settings</a></li>
-                    <li><a href="#home">Sign out</a></li>
-                </ul>
-                <!-- drop-down icon-->
+    <head>
+        <link rel="stylesheet" href="style/homepage.css"> 
+        <link rel="stylesheet" href="style/project-details.css">
+        <title>Taskit Home</title>
+    </head>
+    <body>
+        <div id="nav-bar">
+            <a href="homepage.html">
+                <img src="images/logo.png">
+            </a>
+            <a class="nav-bar-item" href="#aboutUs">About Us</a>
+            <a class="nav-bar-item" href="#explore">Explore</a>
+            <a class="nav-bar-item" href="#support">Support</a>
+            <div id="nav-bar-R" style="float: right; height: 100%">
+                <a class="nav-bar-item" id="login" href="LoginForm.html">Login</a>
+                <a class= "nav-bar-item" id="signup" href="RegisterForm.html">Sign up</a>
+                <div class="nav-bar-item">
+                    <input type="text" id="nav-bar-search" placeholder="Search projects...">
+                </div>
+                <div class="nav-bar-item">
+                    <img id="profile-pic" src="images/profile_pic.jpg">
+                    <i class="fas fa-angle-down"></i>
+                    <ul class="dropdown-menu">
+                        <li id="username"></li>
+                        <li><a href="#profile">My profile</a></li>
+                        <li><a href="#projects">My projects</a></li>
+                        <li><a href="#help">Help</a></li>
+                        <li><a href="#profile-settings">Settings</a></li>
+                        <li><a href="#home">Sign out</a></li>
+                    </ul>
+                    <!-- drop-down icon-->
+                </div>
             </div>
         </div>
-    </div>
 
-<!--Site info and Register-->
-<div class = "body">
-    <div class = "firstThird">
-        <h1>Welcome to Taskit</h1>
-        <h2>Taskit is a project-management platform designed to facilitate 
-            collaboration and reduce the timeline of project production.</h2>
-    </div>
-    <div class = "firstThird">
-        <form class = "form small" action="/action_page.php" target="_blank" id = "registerFormHome"> <!-- have the form be submitted to active page and open a new tab-->
-            <h3>Create an Account!</h3>
-            <h4>Username</h4>
-                <input type="text" name="username" required placeholder="Username">
-            <h4>Email Address</h4>
-                <input type="email" name="emailAddress" required placeholder="Email Address">
-            <h4>Password</h4>
-                <input type="password" name="password" required placeholder="Password"> <!-- pattern="(?=.*\d)(?=.*[a-z])" maxlength="8">-->
-            <p>By clicking "Sign Up", you agree to our Terms of Service and Privacy Policy:</p> 
-                <input type="submit" value="Sign Up" onclick="checkCookieRegister()">
-        </form> 
-    </div>
-    
-    <div class = "secondThird">
-        How it works 
-    </div>
-    <div class = "lastThird">
-        <h1>Don't just do it...</h1>
-        <img src="images/logo.png" id = "logoBottom" alt="logo">
-    </div>
-</div>
-<!--Footer-->
-<footer>
-        <img src="images/logo.png" id = "logoFooter" alt="logo"></img>
-    <ul class = "footerLists"><h4>Product</h4>
-        <li class = "footerLinks"><a href="homepage.html">Features</a></li>
-        <li class = "footerLinks"><a href="homepage.html">Security</a></li>
-        <li class = "footerLinks"><a href="homepage.html">Enterprise</a></li>
-        <li class = "footerLinks"><a href="homepage.html">Customer Stories</a></li>
-        <li class = "footerLinks"><a href="homepage.html">Pricing</a></li>
-    </ul>
-    <ul class = "footerLists"><h4>Support</h4>
-        <li class = "footerLinks"><a href="homepage.html">Help</a></li>
-        <li class = "footerLinks"><a href="homepage.html">Community Forum</a></li>
-        <li class = "footerLinks"><a href="homepage.html">Professional Service</a></li>
-        <li class = "footerLinks"><a href="homepage.html">Contact Us</a></li>
-    </ul>
-    <ul class = "footerLists"><h4>Company</h4>
-        <li class = "footerLinks"><a href="homepage.html">About Us</a></li>
-        <li class = "footerLinks"><a href="homepage.html">Blog</a></li>
-        <li class = "footerLinks"><a href="homepage.html">Careers</a></li>
-    </ul>
-    
-</footer>
+        <!--Site info and Register-->
+        <div class = "body">
+            <div class = "firstThird">
+                <h1>Welcome to Taskit</h1>
+                <h2>Taskit is a project-management platform designed to facilitate 
+                    collaboration and reduce the timeline of project production.</h2>
+            </div>
+            <div class = "firstThird">
+                <form class = "form small" action="/action_page.php" target="_blank" id = "registerFormHome"> <!-- have the form be submitted to active page and open a new tab-->
+                    <h3>Create an Account!</h3>
+                    <h4>Username</h4>
+                    <input type="text" name="username" required placeholder="Username">
+                    <h4>Email Address</h4>
+                    <input type="email" name="emailAddress" required placeholder="Email Address">
+                    <h4>Password</h4>
+                    <input type="password" name="password" required placeholder="Password"> <!-- pattern="(?=.*\d)(?=.*[a-z])" maxlength="8">-->
+                    <p>By clicking "Sign Up", you agree to our Terms of Service and Privacy Policy:</p> 
+                    <input type="submit" value="Sign Up" onclick="checkCookieRegister()">
+                </form> 
+            </div>
 
-<script src = "script/homepage.js"></script>
-<script src = "script/jquery.js"></script>
+            <div class = "secondThird">
+                How it works 
+            </div>
+            <div class = "lastThird">
+                <h1>Don't just do it...</h1>
+                <img src="images/logo.png" id = "logoBottom" alt="logo">
+            </div>
+        </div>
+        <!--Footer-->
+        <footer>
+            <img src="images/logo.png" id = "logoFooter" alt="logo">
+        <ul class = "footerLists"><h4>Product</h4>
+            <li class = "footerLinks"><a href="homepage.html">Features</a></li>
+            <li class = "footerLinks"><a href="homepage.html">Security</a></li>
+            <li class = "footerLinks"><a href="homepage.html">Enterprise</a></li>
+            <li class = "footerLinks"><a href="homepage.html">Customer Stories</a></li>
+            <li class = "footerLinks"><a href="homepage.html">Pricing</a></li>
+        </ul>
+        <ul class = "footerLists"><h4>Support</h4>
+            <li class = "footerLinks"><a href="homepage.html">Help</a></li>
+            <li class = "footerLinks"><a href="homepage.html">Community Forum</a></li>
+            <li class = "footerLinks"><a href="homepage.html">Professional Service</a></li>
+            <li class = "footerLinks"><a href="homepage.html">Contact Us</a></li>
+        </ul>
+        <ul class = "footerLists"><h4>Company</h4>
+            <li class = "footerLinks"><a href="homepage.html">About Us</a></li>
+            <li class = "footerLinks"><a href="homepage.html">Blog</a></li>
+            <li class = "footerLinks"><a href="homepage.html">Careers</a></li>
+        </ul>
 
-</body>
+        </footer>
+
+    <script src = "script/homepage.js"></script>
+    <script src = "script/jquery.js"></script>
+
+    </body>
 </html>
