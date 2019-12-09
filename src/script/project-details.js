@@ -61,6 +61,27 @@ function addTask(task) {
     this.appendChild(task);
 }
 
-function expandTask(){
-    
+function expandTask(index){
+    $("#dimming-screen").show();
+    $(".task-window").show();
+    $(".task-window-content").hide();
+    $("#tab0").css('background-color', 'lightgray');
+    $("#tab1").css('background-color', 'lightgray');
+    $("#tab2").css('background-color', 'lightgray');
+    if(index==0){
+        $("#hashtags-section").show();
+        $("#tab0").css('background-color', 'white');
+    }
+    else if(index==1){
+        $("#comment-section").show();
+        $("#tab1").css('background-color', 'white');
+    }
+    else if(index==2){
+        $("#task-edit-section").show();
+        $("#tab2").css('background-color', 'white');
+    }
+}
+function closeTask() {
+    $("#dimming-screen").hide();
+    $(".task-window").hide();
 }

@@ -24,6 +24,7 @@ body {margin-top: 40px;}
     top: 0;
     left: 0;
     z-index: 1;
+    display: none;
 }
 
 /* NAV BAR */
@@ -85,19 +86,12 @@ ul {list-style: none; margin: 0px; padding: 0px;}
 #project-description {
     float: left;
     background-color: white;
-    height: 200px;
+    height: 250px;
 }
-
-
-#project-settings-icon {
-    float: right;
-    width: 40px;
-}
-
-#workspace {
-    float: left;
-    background-color: darkgray;
-}
+#project-description h3{padding: 0px; margin: 0px;}
+#project-settings-icon {float: right; width: 40px;}
+#project-status-icon {width: 40px; color: orange; margin: 5px}
+#workspace {float: left; background-color: darkgray;}
 
 #side-bar, #project-description, #workspace {width: 100%; padding: 20px;}
 
@@ -129,6 +123,7 @@ ul {list-style: none; margin: 0px; padding: 0px;}
 .task h4 {margin: 0px;}
 
 .task-window {
+    display: none;
     height: 50%;
     width: 50%;
     background-color: lightgray;
@@ -141,8 +136,34 @@ ul {list-style: none; margin: 0px; padding: 0px;}
     z-index: 2;
 }
 .task-window h4 {margin: 5px 0px 5px 0px;}
-.task-window li {display:inline; background-color: white; border-radius: 10%; padding: 5px;} 
-.task-window-content {height: 80%; width: 80%; top: 20%; background-color: white; border-radius: 10%;}
+.task-window li {display:inline; border-radius: 10%; padding: 5px;} 
+.task-window-content {
+    height: 80%;
+    width: 100%;
+    background-color: white;
+    border-radius: 5%;
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+}
+#comments{    height: 90%;
+    width: 100%;
+    border-radius: 5%;
+    overflow: scroll;
+}
+#submitmsg {color: white; background-color: green;}
+#delete-task, #archive-task {background-color: lightgray; border-radius: 10%; width : 100px; height : 50px; font-size: 20px; margin: 20px;}
+#delete-task {color: white; background-color: red;}
+
+.hashtag {
+    background: #0070c9;
+    color: white;
+    border-radius: 15%;
+    height: 20px;
+    float: left;
+    margin: 10px;
+    padding: 5px 5px 25px 5px;
+}
+.task-window p{margin: 10px;}
 
 /* icons */
 .fa-caret-right, .fa-caret-down{padding-right: 10px;}
@@ -152,8 +173,7 @@ div [class*="fa-"]:hover {color: darkgoldenrod}
 
 footer{
     background-color: rgb(50, 50, 50);
-    position: fixed;
-    display: block;
+    display: inline-block;
     z-index: 2;
     }
 
@@ -164,21 +184,60 @@ footer{
     margin-top: 80px;
     margin-left: 5%;
 }
-footer h4{
-    color: white;
-}
+footer h4{color: white;}
 
-  .footerLists{
+.footerLists{
     float: left;
     padding: 10px;
     text-align: center;
     margin: 0% 4% 0% 4%;
-    
+}
+.footerLinks a{color: white; text-decoration: none;}
+.footerLinks a:hover{color: gray;}
+form{font-size: 20px;}
+/* Chat containers */
+.container {
+    width:60%;
+    color: black;
+    float: left;
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+
   }
-  .footerLinks a{
-      color: white;
-      text-decoration: none;
+  
+  /* Darker chat container */
+  .blue {
+    float: right;
+    border-color: #ccc;
+    background-color: rgb(52, 91, 249);
   }
-  .footerLinks a:hover{
-      color: gray;
+
+  /* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
   }
+  
+ .message_container form {
+    float: right;
+    position: fixed;
+    padding: 10px;
+    bottom: 20px;
+ }
+
+ #usermsg {
+    width: 75%;
+ }
+
+ #submitmsg {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-color: white;
+    border-radius: 8px; 
+    width: 20%;
+ }

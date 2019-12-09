@@ -12,11 +12,58 @@
     </head>
     <body>
         <div class="task-window">
-            <h4>Task Name <div style="float: right"><ul>
-                <li>Hashtag</li>
-                <li>Comments</li>
-                <li>Edit</li></ul></div></h4>
-            <div class="task-window-content"></div>
+            <h4>Sample Phone Version<div style="float: right"><ul>
+                <li id="tab0" onclick="expandTask(0)">Hashtag</li>
+                <li id="tab1" onclick="expandTask(1)">Comments</li>
+                <li id="tab2" onclick="expandTask(2)">Edit</li>
+                <li onclick="closeTask()" style="background-color: lightgray"><i class="fa fa-close"></i></li></ul></div></h4>
+            <div id="hashtags-section" class="task-window-content">
+                <div>
+                    <div class="hashtag">phase 1
+                        <i class="fa fa-close"></i></div>
+                    <div class="hashtag">priority
+                        <i class="fa fa-close"></i></div>
+                    <div class="hashtag">team 3
+                        <i class="fa fa-close"></i></div>
+                    <div class="hashtag">team 4
+                        <i class="fa fa-close"></i></div>
+                    <div class="hashtag">5 hours
+                        <i class="fa fa-close"></i></div>
+                    <div></div><div class="clearfix"></div>
+                    <p>Add hashtag: # <input> <i class="fa fa-plus"></i></p>
+                </div>
+            </div>
+            <div id="comment-section" class="task-window-content">
+                <div id="comments">
+                    <div class="container">
+                        <p><b>Aubrey</b><br>Need some help on section 4B</p>
+                    </div>
+                    <div class="container blue">
+                        <p>Can somebody complete the written defense of the task?</p>
+                    </div>
+                    <div class="container">
+                        <p><b>Andrea</b><br>Yes, I'm wrapping up my portion of the task. I can complete the written analysis.</p>
+                    </div>
+                    <div class="container">
+                        <p><b>Klay</b><br>Ok Andrea. Lmk if you need help with that. I'll be done with testing by Friday.</p>
+                    </div>
+                    <div class="container blue">
+                        <p>Perfect, good work guys :)</p>
+                    </div>
+                </div>
+                <form name="message" action="">
+                    <input name="usermsg" type="text" id="usermsg" size="100" />
+                    <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+                </form>
+            </div>
+            <div id="task-edit-section" class="task-window-content">
+                <div>
+                    <p>Task name: Sample Phone Version <i class="far fa-edit"></i></p>
+                    <p>Deadline: 12/12/19 23:59 <i class="far fa-edit"></i></p>
+                    <p>Category: To do <i class="far fa-edit"></i></p>
+                    <button id="archive-task">Archive</button><button id="delete-task">Delete</button>
+                </div>
+            </div>
         </div>
         <span id="dimming-screen"></span>
         <div id="main-container">
@@ -69,7 +116,8 @@
             </div>
             <div class="col-9">
                 <div id="project-description">
-                    <h1 id="project-name">User Interfaces Lab 3<i id="project-settings-icon" class="fas fa-cog"></i></h1>
+                    <h1 id="project-name">User Interfaces Lab 3<i id="project-status-icon" class="far fa-hourglass"></i><i id="project-settings-icon" class="fas fa-cog"></i></h1>
+                    <h3>Due: December 12, 2019</h3>
                     <p>The objective of this exercise is to design a platform to manage tasks and events. The webpage can be used with or without registering on the website. The design of the platform will follow the user-centred design methodology as explained in the following section. The platform should be able to be used with a desktop, tablet or mobile device.</p>
                 </div>
                 <div id="workspace">
@@ -78,18 +126,18 @@
                         <h3>TO DO</h3>
                         <div class="task">
                             <h4>Sample Phone Version</h4>
-                            <p class="date">Deadline: 03/06/19 15:47</p>
+                            <p class="date">Deadline: 12/12/19 23:59</p>
                             <p>We should create at least one mobile version of a page. Although Taskit is more likely to be used on a desktop, mobile devices are so widely used to access websites that we should take that into account.</p>
 
                             <div style="float: right">
-                                <i class="fas fa-hashtag"></i>
-                                <i class="far fa-comment"></i>
-                                <i class="far fa-edit"></i>
+                                <i class="fas fa-hashtag" onclick="expandTask(0)"></i>
+                                <i class="far fa-comment" onclick="expandTask(1)"></i>
+                                <i class="far fa-edit" onclick="expandTask(2)"></i>
                             </div>
                         </div>
                         <div class="task">
                             <h4>Search Results Page</h4>
-                            <p class="date">Deadline: 03/06/19 15:47</p>
+                            <p class="date">Deadline: 12/12/19 23:59</p>
                             <p>We must create a search results page that shows the results of a search. Searches are input in the search bar in the top navigation bar, in order to give the user quick access to any project from any page.</p>
 
                             <div style="float: right">
@@ -104,7 +152,7 @@
                         <h3>DOING</h3>
                         <div class="task">
                             <h4>Project Details Page</h4>
-                            <p class="date">Deadline: 03/06/19 15:47</p>
+                            <p class="date">Deadline: 12/12/19 23:59</p>
                             <p>We need to create different categories of tasks, access to other projects, access to a chat, ability to edit project settings…</p>
 
                             <div style="float: right">
@@ -115,7 +163,7 @@
                         </div>
                         <div class="task">
                             <h4>Login Page</h4>
-                            <p class="date">Deadline: 03/06/19 15:47</p>
+                            <p class="date">Deadline: 12/12/19 23:59</p>
                             <p>Create a simple login page.</p>
 
                             <div style="float: right">
@@ -130,7 +178,7 @@
                         <h3>DONE</h3>
                         <div class="task">
                             <h4>Written Assignment</h4>
-                            <p class="date">Deadline: 03/06/19 15:47</p>
+                            <p class="date">Deadline: 12/12/19 23:59</p>
                             <p>We must make sure to answer all parts of the assignment, including analyzing the design patterns and heuristics employed by our competitors and the creation of relevant personas.</p>
 
                             <div style="float: right">
@@ -141,7 +189,7 @@
                         </div>
                         <div class="task">
                             <h4>Home Page</h4>
-                            <p class="date">Deadline: 03/06/19 15:47</p>
+                            <p class="date">Deadline: 12/12/19 23:59</p>
                             <p>The home page is perhaps the most important page. We must make sure to persuade the user to sign up and begin using Taskit.</p>
 
                             <div style="float: right">
@@ -152,7 +200,7 @@
                         </div>
                         <div class="task">
                             <h4>Group Chat</h4>
-                            <p class="date">Deadline: 03/06/19 15:47</p>
+                            <p class="date">Deadline: 12/12/19 23:59</p>
                             <p>We must design a way for collaborators within a group to be able to communicate with each other through the website.</p>
 
                             <div style="float: right">
@@ -163,9 +211,9 @@
                         </div>
                     </div>
                 </div>
-                                <!--Footer-->
-            <div class="clearfix"></div>
-            <footer>
+                <!--Footer-->
+                <div class="clearfix"></div>
+                <footer>
                     <img src="images/logo.png" id = "logoFooter" alt="logo">
                     <ul class = "footerLists"><h4>Product</h4>
                         <li class = "footerLinks"><a href="homepage.html">Features</a></li>
