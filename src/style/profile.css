@@ -196,3 +196,9 @@ footer h4{
   .footerLinks a:hover{
       color: gray;
   }
+
+
+  .proflink{
+      text-decoration: none;
+      color: black;
+  }
