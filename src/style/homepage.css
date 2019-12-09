@@ -49,6 +49,8 @@ ul {list-style: none; margin: 0px; padding: 0px;}
 .dropdown-menu li:hover {background-color: #ebeaea;}
 
 /*Homepage Body Styling*/
+
+/*mission statement and register form*/
 .body{
     float: left;
 }
@@ -56,14 +58,19 @@ ul {list-style: none; margin: 0px; padding: 0px;}
     width: 50%;
     float: left;
 }
-h1{
-    margin: 20% 0% 10% 19%;
+#missionStatement{
+    background-image: url('../images/people-working-together-in-meeting.jpg');
+    background-size: 550px 450px;
+}
+#missionStatement h1{
+    margin: 7% 0% 15% 25%;
     padding: 5%;
     float: center;
+    color:black;
 }
-h2{
-    padding: 5%;
-    margin: 10% 0% 20% 0%;
+#statement{
+    padding: 10%;
+    margin-top: 250px;
 }
 /*Form Styling*/
 .small{
@@ -90,21 +97,55 @@ p{
 }
 input[type = text],input[type = email],input[type = password]{
     width: 100%;
-    margin: 2%;
+    margin: 1%;
 }
 input[type = submit]{
-    margin-left: 49%;
+    margin-left: 42%;
     background-color: lightskyblue;
+    margin-top: 19px;
+    padding: 15px 32px;
+    font-size: 20px;
+    border-radius: 12px;
 }
+input[type = submit]:hover{
+    background-color: royalblue;
+}
+/*Demonstration Image Styling*/
 .secondThird{
-    position:relative;
+    display: inline-block;
+    width: 100%;
+}
+.demo{
+    margin: 5px;
+    border: 1px solid #ccc;
+    float:left;
+    width: 30%;
+  }
+  
+.demo:hover {
+    border: 1px solid #777;
+  }
+  
+.demo img {
+    width: 100%;
+    height: auto;
+  }
+  
+.desc {
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+  }
+.body{
+    margin-bottom: 200px;   
 }
 .lastThird h1{
     margin-left: 33%;
 }
 .lastThird{
-    position:relative;
-    margin-bottom: 200px;
+    display: inline-block;
+    height: 200px;
+    margin-top: 10px;
 }
 #logoBottom{
     max-width: 50%;
@@ -116,7 +157,7 @@ input[type = submit]{
 footer{
     background-color: rgb(50, 50, 50);
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     left: 0px;
     }
 
