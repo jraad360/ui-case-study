@@ -35,13 +35,16 @@
 
 <!--Site info and Register-->
 <div class = "body">
-    <div class = "firstThird">
-        <h1>Welcome to Taskit</h1>
-        <h2>Taskit is a project-management platform designed to facilitate 
+    <div class = "firstThird" id = "missionStatement">
+
+        <h1>Welcome to Taskit!</h1>
+        
+        <h2 id = "statement">Taskit is a project-management platform designed to facilitate 
             collaboration and reduce the timeline of project production.</h2>
-    </div>
+
+        </div>
     <div class = "firstThird">
-        <form class = "form small" action="/action_page.php" target="_blank" id = "registerFormHome"> <!-- have the form be submitted to active page and open a new tab-->
+        <form class = "form small" onsubmit="userRegister()" action="/action_page.php" target="_blank" id = "registerFormHome"> <!-- have the form be submitted to active page and open a new tab-->
             <h3>Create an Account!</h3>
             <h4>Username</h4>
                 <input type="text" name="username" required placeholder="Username">
@@ -50,13 +53,27 @@
             <h4>Password</h4>
                 <input type="password" name="password" required placeholder="Password"> <!-- pattern="(?=.*\d)(?=.*[a-z])" maxlength="8">-->
             <p>By clicking "Sign Up", you agree to our Terms of Service and Privacy Policy:</p> 
-                <input type="submit" value="Sign Up" onclick="checkCookieRegister()">
+                <input type="submit" value="Sign Up" id="registerButton2">
         </form> 
     </div>
-    
+    <!--Demonstration of how site works-->
     <div class = "secondThird">
-        How it works 
+        <div class="demo">
+                  <img src="images/logo.png" alt="Task Manager" width="600" height="400">
+                <div class="desc">Manage your tasks!</div>
+              </div>
+              
+              <div class="demo">
+                  <img src="images/profile.png" alt="Profile Page" width="600" height="400">
+                <div class="desc">Edit your profile!</div>
+              </div>
+              
+              <div class="demo">
+                  <img src="images/explore.png" alt="Explore Page" width="600" height="400">
+                <div class="desc">Explore real-life events!</div>
+              </div>
     </div>
+<!--Slogan and Logo-->
     <div class = "lastThird">
         <h1>Don't just do it...</h1>
         <img src="images/logo.png" id = "logoBottom" alt="logo">

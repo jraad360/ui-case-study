@@ -33,7 +33,7 @@
     </div>
 
 <div class = "form big">
-    <form action="/action_page.php" target="_blank" id = "registerFormSeparate"> <!-- have the form be submitted to active page and open a new tab-->
+    <form onsubmit="userRegister()" action="/action_page.php" target ="_blank" id = "registerFormSeparate"> <!-- have the form be submitted to active page and open a new tab-->
         <h3>Create Taskit Account!</h3>
         <h4>Username</h4>
             <input type="text" name="username" required placeholder="Username">
@@ -43,7 +43,7 @@
             <input type="password" name="password" required placeholder="Password"> <!-- pattern="(?=.*\d)(?=.*[a-z])" maxlength="8">-->
         <p>By clicking "Sign Up", you agree to our Terms of Service and Privacy Policy:</p> 
         
-            <input type="submit" value="Sign Up" onclick="checkCookieRegister()">
+            <input type="submit" value="Sign Up" id="registerButton1">
     </form> 
 </div>
 

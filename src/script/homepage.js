@@ -1,11 +1,4 @@
 /*logout functionality*/
-  function logout(){
-      document.getElementById("userProfile").style.display = "none";
-      //may need to have it to change --> 
-      document.getElementById("content").style.display = "none";
-      document.getElementById("loginProfile").style.display = "block";
-  }
-/*Jorge code */
   $(document).ready(function(){
     setup();
     
@@ -46,66 +39,15 @@ function logout() {
     $("#signup").show();
     $("#nav-bar-search").hide();
     $("#profile-pic").hide();
+    document.location.href ="homepage.html";
 }
 
-/*COOKIE ACCOUNT FORMULAS*/
-
-/*Takes info from form and passes to setCookie */
-function cookieName(username, formInfo){
-  var info = ""
-  for (i = 0; i < formInfo.length ;i++) {
-      info += formInfo.elements[i].value;
-    }
-  setCookie(username, info);
-  return ""
+function userLogin(){
+    document.location.href = "project-details.html";
+    login();
+}
+function userRegister(){
+    document.location.href = "profile.html";
+    login();
 }
 
-function setCookie(cname, cvalue){
-    document.cookie = cname + "=" + cvalue +";";
-}
-/**Checks for cookie */
-function getCookie(cname) {
-  var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for(var i = 0; i <ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "none";
-}
-/** Check for registered account, triggered onClick of create account button */
-function checkCookieRegister(){
-  var formInfo = document.getElementById("registerForm");
-  var userEmail = formInfo.elements[4].value;
-  var unCookie = getCookie(userEmail);
-  if(unCookie == "none"){
-        cookieName(userEmail, formInfo);
-        newUserName(userEmail); //Displays new page with this username
-    } else{
-        /**ToDo: alert: account already exists with this email */
-        alert("There is already a user with this email: " + unCookie);
-    }
-}
-
-/**ToDo: Checks login info, triggered onClick of login. If correct, load user page */
-function checkCookieLogin(){
-  var formArray = document.getElementById("loginForm");
-  var username = formArray.elements[0].value; 
-  var unCookie = getCookie(username);
-    if(unCookie == "none"){
-        alert("There is no registered user: " + username);
-    } else{
-        newUserName(username);
-    }
-}
-
-//Displays event management page
-function newUserName(name){
-    alert("login successful");
-}
