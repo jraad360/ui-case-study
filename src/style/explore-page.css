@@ -76,6 +76,10 @@ ul {list-style: none; margin: 0px; padding: 0px;}
 .sublist li:hover{
     color: rgb(72, 124, 170);
 }
+.proflink{
+  text-decoration: none;
+  color: black;
+}
 
 /* MAIN AREA */
 #project-description {
