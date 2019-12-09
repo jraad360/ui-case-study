@@ -153,6 +153,8 @@ div [class*="fa-"]:hover {color: darkgoldenrod}
 footer{
     background-color: rgb(50, 50, 50);
     position: fixed;
+    display: block;
+    z-index: 2;
     }
 
 #logoFooter{
