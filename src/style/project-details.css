@@ -15,6 +15,17 @@ div [class*="col-"] {display: inline-block; float: left;}
 body {margin-top: 40px;}
 #main-container {margin: 0px; padding: 0px;}
 
+#dimming-screen {
+    background-color: black;
+    opacity: 80%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 /* NAV BAR */
 #nav-bar {
     top: 0;
@@ -77,6 +88,12 @@ ul {list-style: none; margin: 0px; padding: 0px;}
     height: 200px;
 }
 
+
+#project-settings-icon {
+    float: right;
+    width: 40px;
+}
+
 #workspace {
     float: left;
     background-color: darkgray;
@@ -97,9 +114,7 @@ ul {list-style: none; margin: 0px; padding: 0px;}
     margin: 10px;
     box-shadow: 2px 2px 2px 2px;
 }
-.category h3 {
-    margin: 0px;
-}
+.category h3 {margin: 0px;}
 
 .task {
     text-align: left;
@@ -111,10 +126,25 @@ ul {list-style: none; margin: 0px; padding: 0px;}
     border-radius: 10%;
     font-size: 8pt;
 }
-.task h4 {
-    margin: 0px;
-}
+.task h4 {margin: 0px;}
 
-.fa-caret-right, .fa-caret-down{
-    padding-right: 10px;
+.task-window {
+    height: 50%;
+    width: 50%;
+    background-color: lightgray;
+    position: fixed;
+    border-radius: 5%;
+    border: 5px solid gray;
+    padding: 10px;
+    left: 35%;
+    top: 25%;
+    z-index: 2;
 }
+.task-window h4 {margin: 5px 0px 5px 0px;}
+.task-window li {display:inline; background-color: white;} 
+.task-window-content {height: 80%; width: 80%; left: 20%; background-color: white;}
+
+/* icons */
+.fa-caret-right, .fa-caret-down{padding-right: 10px;}
+div [class*="fa-"] {transition: 0.2s}
+div [class*="fa-"]:hover {color: darkgoldenrod}
