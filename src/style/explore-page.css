@@ -161,6 +161,9 @@ ul {list-style: none; margin: 0px; padding: 0px;}
   .icon{
     width: 10%
   }
+  .smallIcon{
+    width: 2.5%;
+  }
 
   /*Footer Styling*/
 
