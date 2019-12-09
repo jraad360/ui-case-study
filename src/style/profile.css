@@ -78,6 +78,84 @@ input{
 
 form{
     font-size: 20px;
-  
-  
 }
+.messages{
+    display: flex;
+    background: #343434;
+    color: white;
+}
+.contact-tab {
+    width: 30%;
+    height: 1000px;
+    background: #4b4d4f;
+    color: white;
+    text-align: center;
+}
+
+.contact {
+    height: 75px;
+    margin: 0px 0px 0px 5px; 
+}
+.contact img {
+    height: 55px;
+    width: 55px;
+    float: left;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.contact p {
+    padding: 20px 0px 0px 0px;
+}
+
+.message_container {
+    width: 70%;
+
+}
+
+/* Chat containers */
+.container {
+    width:60%;
+    color: black;
+    float: left;
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px 0px 0px;
+
+  }
+  
+  /* Darker chat container */
+  .blue {
+    float: right;
+    border-color: #ccc;
+    background-color: rgb(52, 91, 249);
+  }
+
+  /* Clear floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+ .message_container form {
+    float: right;
+    position: fixed;
+    padding: 10px;
+    bottom: 20px;
+ }
+
+ #usermsg {
+    width: 75%;
+ }
+
+ #submitmsg {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-color: white;
+    border-radius: 8px; 
+    width: 20%;
+ }
